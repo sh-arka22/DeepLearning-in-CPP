@@ -1,0 +1,9 @@
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2/build/CMakeFiles/hello_world.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2/build/CMakeFiles/functional_demo.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2/build/CMakeFiles/demo.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2/build/CMakeFiles/run_all.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2/build/CMakeFiles/run_hello.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2/build/CMakeFiles/run_functional.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2/build/CMakeFiles/run_demo.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2/build/CMakeFiles/edit_cache.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2/build/CMakeFiles/rebuild_cache.dir

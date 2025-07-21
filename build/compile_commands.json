@@ -1,8 +1,20 @@
 [
 {
   "directory": "/Users/arkajyotisaha/Desktop/DLusingC++/build",
-  "command": "/usr/bin/clang++   -O2 -g -DNDEBUG -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Werror -o CMakeFiles/hello_world.dir/example.cpp.o -c /Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2/example.cpp",
+  "command": "/usr/bin/clang++   -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Werror -o CMakeFiles/hello_world.dir/example.cpp.o -c /Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2/example.cpp",
   "file": "/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2/example.cpp",
   "output": "CMakeFiles/hello_world.dir/example.cpp.o"
+},
+{
+  "directory": "/Users/arkajyotisaha/Desktop/DLusingC++/build",
+  "command": "/usr/bin/clang++   -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Werror -o CMakeFiles/functional_demo.dir/funtional/src/using_functional.cpp.o -c /Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2/funtional/src/using_functional.cpp",
+  "file": "/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2/funtional/src/using_functional.cpp",
+  "output": "CMakeFiles/functional_demo.dir/funtional/src/using_functional.cpp.o"
+},
+{
+  "directory": "/Users/arkajyotisaha/Desktop/DLusingC++/build",
+  "command": "/usr/bin/clang++   -g -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Werror -o CMakeFiles/demo.dir/demo.cpp.o -c /Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2/demo.cpp",
+  "file": "/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2/demo.cpp",
+  "output": "CMakeFiles/demo.dir/demo.cpp.o"
 }
 ]

@@ -1,0 +1,230 @@
+﻿OpenCV
+
+Prerequisites
+sudo apt install build-essential
+sudo apt install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+sudo apt install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libdc1394-22-dev
+
+git clone https://github.com/jasperproject/jasper-client.git jasper
+chmod +x jasper/jasper.py
+pip install --upgrade setuptools
+pip install -r jasper/client/requirements.txt
+sudo apt install libjasper-dev
+
+sudo apt install pylint libatlas-base-dev libblas-dev liblapack-dev
+sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev gtk+3.0
+sudo apt install libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libavresample-dev libeigen3-dev libeigen3-doc doxygen graphviz
+sudo apt install libgphoto2-dev libhdf5-dev x264 v4l-utils libgtk-3-dev qt5-default
+
+
+Using Anaconda already and wanted to eliminate any personal peeve:
+conda config --set auto_activate_base false
+Source
+git clone https://github.com/opencv/opencv.git
+git clone https://github.com/opencv/opencv_contrib.git
+Build
+cd opencv
+mkdir build
+cd build
+
+Either
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+	-D CMAKE_INSTALL_PREFIX=/usr/local \
+	-D INSTALL_C_EXAMPLES=ON \
+	-D INSTALL_PYTHON_EXAMPLES=ON \
+	-D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules \
+      -D PYTHON_EXECUTABLE=/usr/bin/python3 \
+	-D BUILD_EXAMPLES=ON ..
+
+or
+cmake-gui
+
+Then
+
+Either
+make
+
+or
+nproc
+# use response from above command to replace the number 8 below
+make -j8
+# where 8 specifies the number of processors for the build
+TBD
+Install
+sudo make install
+
+Links
+sudo sh -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/opencv.conf'
+sudo ldconfig
+find /usr/local/lib/ -type f -name "cv2*.so"
+# you may have to replace 3.7 below for your specific installation
+cd /usr/local/lib/python3.7/dist-packages/
+sudo mv cv2.cpython-36m-x86_64-linux-gnu.so cv2.so
+Validation
+TBD
+References
+CMake
+Looking for ccache - not found
+SSE is not supported by C++ compiler
+SSE2 is not supported by C++ compiler
+SSE3 is not supported by C++ compiler
+SSSE3 is not supported by C++ compiler
+SSE4_1 is not supported by C++ compiler
+POPCNT is not supported by C++ compiler
+SSE4_2 is not supported by C++ compiler
+FP16 is not supported by C++ compiler
+FMA3 is not supported by C++ compiler
+AVX is not supported by C++ compiler
+AVX2 is not supported by C++ compiler
+AVX_512F is not supported by C++ compiler
+AVX512_COMMON is not supported by C++ compiler
+AVX512_SKX is not supported by C++ compiler
+Optimization SSE3 is not available, skipped
+Dispatch optimization SSE4_1 is not available, skipped
+Dispatch optimization SSE4_2 is not available, skipped
+Dispatch optimization AVX is not available, skipped
+Dispatch optimization FP16 is not available, skipped
+Dispatch optimization AVX2 is not available, skipped
+Dispatch optimization AVX512_SKX is not available, skipped
+libjpeg-turbo: VERSION = 2.0.2, BUILD = opencv-4.1.1-pre-libjpeg-turbo
+Could NOT find Jasper (missing: JASPER_LIBRARIES) (found version "1.900.1")
+found Intel IPP (ICV version): 2019.0.0 [2019.0.0 Gold]
+at: /usr/local/3rdparty/ippicv/ippicv_lnx/icv
+found Intel IPP Integration Wrappers sources: 2019.0.0
+at: /usr/local/3rdparty/ippicv/ippicv_lnx/iw
+LAPACK(Atlas): LAPACK_LIBRARIES: /usr/lib/x86_64-linux-gnu/liblapack.so;/usr/lib/x86_64-linux-gnu/libcblas.so;/usr/lib/x86_64-linux-gnu/libatlas.so
+LAPACK(Atlas): Support is enabled.
+VTK is not found. Please set -DVTK_DIR in CMake to VTK build directory, or to VTK install subdirectory with VTKConfig.cmake file
+OpenCV Python: during development append to PYTHONPATH: /usr/local/python_loader
+Excluding from source files list: modules/imgproc/src/corner.avx.cpp
+Excluding from source files list: modules/imgproc/src/imgwarp.avx2.cpp
+Excluding from source files list: modules/imgproc/src/imgwarp.sse4_1.cpp
+Excluding from source files list: modules/imgproc/src/resize.avx2.cpp
+Excluding from source files list: modules/imgproc/src/resize.sse4_1.cpp
+Excluding from source files list: modules/imgproc/src/sumpixels.avx512_skx.cpp
+Registering hook 'INIT_MODULE_SOURCES_opencv_dnn': /home/chowkidar/projects/opencv/modules/dnn/cmake/hooks/INIT_MODULE_SOURCES_opencv_dnn.cmake
+opencv_dnn: filter out cuda4dnn source code
+Excluding from source files list: <BUILD>/modules/dnn/layers/layers_common.avx.cpp
+Excluding from source files list: <BUILD>/modules/dnn/layers/layers_common.avx2.cpp
+Excluding from source files list: <BUILD>/modules/dnn/layers/layers_common.avx512_skx.cpp
+Excluding from source files list: modules/features2d/src/fast.avx2.cpp
+Excluding from source files list: modules/calib3d/src/undistort.avx2.cpp
+Pylint: registered 163 targets. Build 'check_pylint' target to run checks ("cmake --build . --target check_pylint" or "make check_pylint")
+
+General configuration for OpenCV 4.1.1-pre =====================================
+Version control: 4.1.0-426-g974491f93
+
+Platform:
+Timestamp: 2019-06-21T12:28:39Z
+Host: Linux 5.0.0-17-generic x86_64
+CMake: 3.13.4
+CMake generator: Unix Makefiles
+CMake build tool: /usr/bin/make
+Configuration: Release
+
+CPU/HW features:
+Baseline:
+requested: SSE3
+Dispatched code generation:
+requested: SSE4_1 SSE4_2 AVX FP16 AVX2 AVX512_SKX
+
+C/C++:
+Built as dynamic libs?: YES
+C++ Compiler: /usr/bin/c++ (ver 8.3.0)
+C++ flags (Release): -ffast-math -fvisibility=hidden -fvisibility-inlines-hidden -O3 -DNDEBUG -DNDEBUG
+C++ flags (Debug): -ffast-math -fvisibility=hidden -fvisibility-inlines-hidden -g -O0 -DDEBUG -D_DEBUG
+C Compiler: /usr/bin/cc
+C flags (Release): -ffast-math -fvisibility=hidden -O3 -DNDEBUG -DNDEBUG
+C flags (Debug): -ffast-math -fvisibility=hidden -g -O0 -DDEBUG -D_DEBUG
+Linker flags (Release): -Wl,--gc-sections 
+Linker flags (Debug): -Wl,--gc-sections 
+ccache: NO
+Precompiled headers: YES
+Extra dependencies: dl m pthread rt
+3rdparty dependencies:
+
+OpenCV modules:
+To be built: calib3d core dnn features2d flann gapi highgui imgcodecs imgproc ml objdetect photo python3 stitching ts video videoio
+Disabled: java_bindings_generator world
+Disabled by dependency: -
+Unavailable: java js python2
+Applications: apps
+Documentation: doxygen
+Non-free algorithms: NO
+
+GUI: 
+GTK+: YES (ver 3.24.8)
+GThread : YES (ver 2.60.0)
+GtkGlExt: NO
+VTK support: NO
+
+Media I/O: 
+ZLib: build (ver 1.2.11)
+JPEG: build-libjpeg-turbo (ver 2.0.2-62)
+WEBP: build (ver encoder: 0x020e)
+PNG: build (ver 1.6.37)
+TIFF: build (ver 42 - 4.0.10)
+JPEG 2000: build (ver 1.900.1)
+OpenEXR: build (ver 2.3.0)
+HDR: YES
+SUNRASTER: YES
+PXM: YES
+PFM: YES
+
+Video I/O:
+DC1394: YES (2.2.5)
+FFMPEG: YES
+avcodec: YES (58.35.100)
+avformat: YES (58.20.100)
+avutil: YES (56.22.100)
+swscale: YES (5.3.100)
+avresample: YES (4.0.0)
+GStreamer: YES (1.15.90)
+v4l/v4l2: YES (linux/videodev2.h)
+gPhoto2: YES
+
+Parallel framework: pthreads
+
+Trace: YES (with Intel ITT)
+
+Other third-party libraries:
+Intel IPP: 2019.0.0 Gold [2019.0.0]
+at: /usr/local/3rdparty/ippicv/ippicv_lnx/icv
+Intel IPP IW: sources (2019.0.0)
+at: /usr/local/3rdparty/ippicv/ippicv_lnx/iw
+Lapack: YES (/usr/lib/x86_64-linux-gnu/liblapack.so /usr/lib/x86_64-linux-gnu/libcblas.so /usr/lib/x86_64-linux-gnu/libatlas.so)
+Custom HAL: NO
+Protobuf: build (3.5.1)
+
+OpenCL: YES (no extra features)
+Include path: /home/chowkidar/projects/opencv/3rdparty/include/opencl/1.2
+Link libraries: Dynamic load
+
+Python 3:
+Interpreter: /usr/bin/python3 (ver 3.7.3)
+Libraries: /usr/lib/x86_64-linux-gnu/libpython3.7m.so (ver 3.7.3)
+numpy: /home/chowkidar/.local/lib/python3.7/site-packages/numpy/core/include (ver 1.16.4)
+install path: lib/python3.7/dist-packages/cv2/python-3.7
+
+Python (for build): /usr/bin/python3
+Pylint: /home/chowkidar/.local/bin/pylint (ver: unknown, checks: 163)
+
+Install to: /usr/local
+-----------------------------------------------------------------
+
+Configuring done
+Generating done
+
+
+Errors
+[ 14%] Building CXX object modules/core/CMakeFiles/opencv_test_core_pch_dephelp.dir/opencv_test_core_pch_dephelp.cxx.o
+In file included from /home/chowkidar/projects/opencv/modules/core/test/test_precomp.hpp:12,
+                 from /home/chowkidar/projects/opencv/build/modules/core/opencv_test_core_pch_dephelp.cxx:1:
+/home/chowkidar/projects/opencv/modules/core/include/opencv2/core/private.hpp:66:12: fatal error: Eigen/Core: No such file or directory
+ #  include <Eigen/Core>
+            ^~~~~~~~~~~~
+compilation terminated.
+make[2]: *** [modules/core/CMakeFiles/opencv_test_core_pch_dephelp.dir/build.make:63: modules/core/CMakeFiles/opencv_test_core_pch_dephelp.dir/opencv_test_core_pch_dephelp.cxx.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:2715: modules/core/CMakeFiles/opencv_test_core_pch_dephelp.dir/all] Error 2
+make: *** [Makefile:163: all] Error 2
+chowkidar@BeUlta:~/projects/opencv/build$

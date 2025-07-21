@@ -1,1 +1,1 @@
-/usr/bin/clang++ -O2 -g -DNDEBUG -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/hello_world.dir/example.cpp.o -o bin/hello_world
+/usr/bin/clang++ -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/hello_world.dir/example.cpp.o -o bin/hello_world

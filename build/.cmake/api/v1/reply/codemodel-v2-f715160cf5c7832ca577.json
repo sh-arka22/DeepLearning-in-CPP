@@ -1,0 +1,114 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "ch2_programs",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "demo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-demo-Debug-818b923e6055b7d6d022.json",
+					"name" : "demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "functional_demo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-functional_demo-Debug-85e1ff0670fa9856cc99.json",
+					"name" : "functional_demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "hello_world::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-hello_world-Debug-c30118a4bc1877fb78f3.json",
+					"name" : "hello_world",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_all::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_all-Debug-29d457a6a3b68c3ab8af.json",
+					"name" : "run_all",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_demo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_demo-Debug-902e1fa60b0aa72ee9e2.json",
+					"name" : "run_demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_functional::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_functional-Debug-30a53fcbbc6e3d1fdab1.json",
+					"name" : "run_functional",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "run_hello::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-run_hello-Debug-c9a869116fe2523a2c9a.json",
+					"name" : "run_hello",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/arkajyotisaha/Desktop/DLusingC++/build",
+		"source" : "/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

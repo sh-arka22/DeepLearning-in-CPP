@@ -1,3 +1,8 @@
 {
-    "cmake.sourceDirectory": "/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2"
+    "cmake.sourceDirectory": "/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-2",
+    "files.associations": {
+        "iostream": "cpp",
+        "functional": "cpp",
+        "algorithm": "cpp"
+    }
 }

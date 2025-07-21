@@ -129,6 +129,108 @@ hello_world/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/build
 .PHONY : hello_world/fast
 
+#=============================================================================
+# Target rules for targets named functional_demo
+
+# Build rule for target.
+functional_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 functional_demo
+.PHONY : functional_demo
+
+# fast build rule for target.
+functional_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/functional_demo.dir/build.make CMakeFiles/functional_demo.dir/build
+.PHONY : functional_demo/fast
+
+#=============================================================================
+# Target rules for targets named demo
+
+# Build rule for target.
+demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 demo
+.PHONY : demo
+
+# fast build rule for target.
+demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/build
+.PHONY : demo/fast
+
+#=============================================================================
+# Target rules for targets named run_all
+
+# Build rule for target.
+run_all: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_all
+.PHONY : run_all
+
+# fast build rule for target.
+run_all/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_all.dir/build.make CMakeFiles/run_all.dir/build
+.PHONY : run_all/fast
+
+#=============================================================================
+# Target rules for targets named run_hello
+
+# Build rule for target.
+run_hello: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_hello
+.PHONY : run_hello
+
+# fast build rule for target.
+run_hello/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_hello.dir/build.make CMakeFiles/run_hello.dir/build
+.PHONY : run_hello/fast
+
+#=============================================================================
+# Target rules for targets named run_functional
+
+# Build rule for target.
+run_functional: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_functional
+.PHONY : run_functional
+
+# fast build rule for target.
+run_functional/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_functional.dir/build.make CMakeFiles/run_functional.dir/build
+.PHONY : run_functional/fast
+
+#=============================================================================
+# Target rules for targets named run_demo
+
+# Build rule for target.
+run_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_demo
+.PHONY : run_demo
+
+# fast build rule for target.
+run_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_demo.dir/build.make CMakeFiles/run_demo.dir/build
+.PHONY : run_demo/fast
+
+demo.o: demo.cpp.o
+.PHONY : demo.o
+
+# target to build an object file
+demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/demo.cpp.o
+.PHONY : demo.cpp.o
+
+demo.i: demo.cpp.i
+.PHONY : demo.i
+
+# target to preprocess a source file
+demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/demo.cpp.i
+.PHONY : demo.cpp.i
+
+demo.s: demo.cpp.s
+.PHONY : demo.s
+
+# target to generate assembly for a file
+demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/demo.cpp.s
+.PHONY : demo.cpp.s
+
 example.o: example.cpp.o
 .PHONY : example.o
 
@@ -153,6 +255,30 @@ example.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hello_world.dir/build.make CMakeFiles/hello_world.dir/example.cpp.s
 .PHONY : example.cpp.s
 
+funtional/src/using_functional.o: funtional/src/using_functional.cpp.o
+.PHONY : funtional/src/using_functional.o
+
+# target to build an object file
+funtional/src/using_functional.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/functional_demo.dir/build.make CMakeFiles/functional_demo.dir/funtional/src/using_functional.cpp.o
+.PHONY : funtional/src/using_functional.cpp.o
+
+funtional/src/using_functional.i: funtional/src/using_functional.cpp.i
+.PHONY : funtional/src/using_functional.i
+
+# target to preprocess a source file
+funtional/src/using_functional.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/functional_demo.dir/build.make CMakeFiles/functional_demo.dir/funtional/src/using_functional.cpp.i
+.PHONY : funtional/src/using_functional.cpp.i
+
+funtional/src/using_functional.s: funtional/src/using_functional.cpp.s
+.PHONY : funtional/src/using_functional.s
+
+# target to generate assembly for a file
+funtional/src/using_functional.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/functional_demo.dir/build.make CMakeFiles/functional_demo.dir/funtional/src/using_functional.cpp.s
+.PHONY : funtional/src/using_functional.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -161,10 +287,22 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... run_all"
+	@echo "... run_demo"
+	@echo "... run_functional"
+	@echo "... run_hello"
+	@echo "... demo"
+	@echo "... functional_demo"
 	@echo "... hello_world"
+	@echo "... demo.o"
+	@echo "... demo.i"
+	@echo "... demo.s"
 	@echo "... example.o"
 	@echo "... example.i"
 	@echo "... example.s"
+	@echo "... funtional/src/using_functional.o"
+	@echo "... funtional/src/using_functional.i"
+	@echo "... funtional/src/using_functional.s"
 .PHONY : help
 
 
