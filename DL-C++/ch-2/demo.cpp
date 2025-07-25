@@ -6,4 +6,4 @@
 int main(){
     std::cout<<"i learned to use cMake";
     return 0;
-}
+} 

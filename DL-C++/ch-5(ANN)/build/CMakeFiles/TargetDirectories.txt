@@ -1,0 +1,9 @@
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-5(ANN)/build/CMakeFiles/sigmoid_demo.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-5(ANN)/build/CMakeFiles/mlp_demo.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-5(ANN)/build/CMakeFiles/run_all.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-5(ANN)/build/CMakeFiles/run_sigmoid.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-5(ANN)/build/CMakeFiles/run_mlp.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-5(ANN)/build/CMakeFiles/run.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-5(ANN)/build/CMakeFiles/build_all.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-5(ANN)/build/CMakeFiles/edit_cache.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-5(ANN)/build/CMakeFiles/rebuild_cache.dir
