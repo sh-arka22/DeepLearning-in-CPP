@@ -1,0 +1,10 @@
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-6/build/CMakeFiles/mse_demo.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-6/build/CMakeFiles/run.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-6/build/CMakeFiles/run_mse.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-6/build/CMakeFiles/run_all.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-6/build/CMakeFiles/build_all.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-6/build/CMakeFiles/run_verbose.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-6/build/CMakeFiles/mse_debug.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-6/build/CMakeFiles/run_debug.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-6/build/CMakeFiles/edit_cache.dir
+/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-6/build/CMakeFiles/rebuild_cache.dir
