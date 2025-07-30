@@ -188,8 +188,8 @@ CMakeFiles/demo.dir/clean:
 # Target rules for target CMakeFiles/run_all.dir
 
 # All Build rule for target.
-CMakeFiles/run_all.dir/all: CMakeFiles/demo.dir/all
 CMakeFiles/run_all.dir/all: CMakeFiles/functional_demo.dir/all
+CMakeFiles/run_all.dir/all: CMakeFiles/demo.dir/all
 CMakeFiles/run_all.dir/all: CMakeFiles/hello_world.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_all.dir/build.make CMakeFiles/run_all.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_all.dir/build.make CMakeFiles/run_all.dir/build
@@ -208,8 +208,8 @@ run_all: CMakeFiles/run_all.dir/rule
 .PHONY : run_all
 
 # codegen rule for target.
-CMakeFiles/run_all.dir/codegen: CMakeFiles/demo.dir/all
 CMakeFiles/run_all.dir/codegen: CMakeFiles/functional_demo.dir/all
+CMakeFiles/run_all.dir/codegen: CMakeFiles/demo.dir/all
 CMakeFiles/run_all.dir/codegen: CMakeFiles/hello_world.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_all.dir/build.make CMakeFiles/run_all.dir/codegen
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/arkajyotisaha/Desktop/DLusingC++/build/CMakeFiles --progress-num=7 "Finished codegen for target run_all"

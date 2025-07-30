@@ -48,6 +48,7 @@
         "stack": "cpp",
         "string": "cpp",
         "string_view": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "random": "cpp"
     }
 }

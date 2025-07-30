@@ -26,10 +26,10 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "demo::@6890427a1f51a3e7e1df"
+			"id" : "functional_demo::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "functional_demo::@6890427a1f51a3e7e1df"
+			"id" : "demo::@6890427a1f51a3e7e1df"
 		},
 		{
 			"id" : "hello_world::@6890427a1f51a3e7e1df"
