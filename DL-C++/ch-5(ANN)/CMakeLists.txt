@@ -25,12 +25,12 @@ message(STATUS "Eigen3 version: ${EIGEN3_VERSION}")
 add_executable(sigmoid_demo "${CMAKE_CURRENT_LIST_DIR}/src/sigmoid.cpp")
 
 # Check if other files exist and add them conditionally
-if(EXISTS "${CMAKE_CURRENT_LIST_DIR}/src/fc_connected.cpp")
-    add_executable(fc_connected_demo "${CMAKE_CURRENT_LIST_DIR}/src/fc_connected.cpp")
-    set(HAS_FC_CONNECTED TRUE)
+if(EXISTS "${CMAKE_CURRENT_LIST_DIR}/src/fc_layer.cpp")
+    add_executable(fc_layer_demo "${CMAKE_CURRENT_LIST_DIR}/src/fc_layer.cpp")
+    set(HAS_FC_LAYER TRUE)
 else()
-    message(WARNING "fc_connected.cpp not found - skipping fc_connected_demo")
-    set(HAS_FC_CONNECTED FALSE)
+    message(WARNING "fc_layer.cpp not found - skipping fc_layer_demo")
+    set(HAS_FC_LAYER FALSE)
 endif()
 
 if(EXISTS "${CMAKE_CURRENT_LIST_DIR}/src/mlp_example.cpp")
@@ -47,12 +47,12 @@ target_link_libraries(sigmoid_demo Eigen3::Eigen)
 target_include_directories(sigmoid_demo PRIVATE ${EIGEN3_INCLUDE_DIR})
 set_target_properties(sigmoid_demo PROPERTIES RUNTIME_OUTPUT_DIRECTORY "bin")
 
-# Apply settings to fc_connected_demo if it exists
-if(HAS_FC_CONNECTED)
-    target_compile_options(fc_connected_demo PRIVATE -Wall -Wextra -Wpedantic -Werror)
-    target_link_libraries(fc_connected_demo Eigen3::Eigen)
-    target_include_directories(fc_connected_demo PRIVATE ${EIGEN3_INCLUDE_DIR})
-    set_target_properties(fc_connected_demo PROPERTIES RUNTIME_OUTPUT_DIRECTORY "bin")
+# Apply settings to fc_layer_demo if it exists
+if(HAS_FC_LAYER)
+    target_compile_options(fc_layer_demo PRIVATE -Wall -Wextra -Wpedantic -Werror)
+    target_link_libraries(fc_layer_demo Eigen3::Eigen)
+    target_include_directories(fc_layer_demo PRIVATE ${EIGEN3_INCLUDE_DIR})
+    set_target_properties(fc_layer_demo PROPERTIES RUNTIME_OUTPUT_DIRECTORY "bin")
 endif()
 
 # Apply settings to mlp_demo if it exists
@@ -65,8 +65,8 @@ endif()
 
 # Create dependencies list based on what exists
 set(ALL_TARGETS sigmoid_demo)
-if(HAS_FC_CONNECTED)
-    list(APPEND ALL_TARGETS fc_connected_demo)
+if(HAS_FC_LAYER)
+    list(APPEND ALL_TARGETS fc_layer_demo)
 endif()
 if(HAS_MLP_EXAMPLE)
     list(APPEND ALL_TARGETS mlp_demo)
@@ -76,9 +76,9 @@ endif()
 add_custom_target(run_all
     COMMAND echo "=== Running Sigmoid Activation Demo ==="
     COMMAND ${CMAKE_CURRENT_BINARY_DIR}/bin/sigmoid_demo
-    $<$<BOOL:${HAS_FC_CONNECTED}>:COMMAND echo "">
-    $<$<BOOL:${HAS_FC_CONNECTED}>:COMMAND echo "=== Running Fully Connected Layer Demo ===">
-    $<$<BOOL:${HAS_FC_CONNECTED}>:COMMAND ${CMAKE_CURRENT_BINARY_DIR}/bin/fc_connected_demo>
+    $<$<BOOL:${HAS_FC_LAYER}>:COMMAND echo ""> 
+    $<$<BOOL:${HAS_FC_LAYER}>:COMMAND echo "=== Running Fully Connected Layer Demo ==="> 
+    $<$<BOOL:${HAS_FC_LAYER}>:COMMAND ${CMAKE_CURRENT_BINARY_DIR}/bin/fc_layer_demo> 
     $<$<BOOL:${HAS_MLP_EXAMPLE}>:COMMAND echo "">
     $<$<BOOL:${HAS_MLP_EXAMPLE}>:COMMAND echo "=== Running Multi-Layer Perceptron Demo ===">
     $<$<BOOL:${HAS_MLP_EXAMPLE}>:COMMAND ${CMAKE_CURRENT_BINARY_DIR}/bin/mlp_demo>
@@ -95,11 +95,11 @@ add_custom_target(run_sigmoid
 )
 
 # Conditional targets for other programs
-if(HAS_FC_CONNECTED)
+if(HAS_FC_LAYER)
     add_custom_target(run_fc
         COMMAND echo "=== Running Fully Connected Layer Demo ==="
-        COMMAND ${CMAKE_CURRENT_BINARY_DIR}/bin/fc_connected_demo
-        DEPENDS fc_connected_demo
+        COMMAND ${CMAKE_CURRENT_BINARY_DIR}/bin/fc_layer_demo
+        DEPENDS fc_layer_demo
         COMMENT "Running fully connected layer demo"
     )
 endif()
