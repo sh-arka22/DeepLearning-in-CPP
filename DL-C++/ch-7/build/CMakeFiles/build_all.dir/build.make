@@ -68,7 +68,8 @@ include CMakeFiles/build_all.dir/progress.make
 
 CMakeFiles/build_all: bin/softmax_demo
 CMakeFiles/build_all: bin/batch_softmax_demo
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building all available softmax demos"
+CMakeFiles/build_all: bin/iris_example
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building all available demos"
 
 CMakeFiles/build_all.dir/codegen:
 .PHONY : CMakeFiles/build_all.dir/codegen

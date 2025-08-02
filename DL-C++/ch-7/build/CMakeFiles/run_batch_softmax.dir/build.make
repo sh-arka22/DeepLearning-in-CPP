@@ -67,9 +67,7 @@ include CMakeFiles/run_batch_softmax.dir/compiler_depend.make
 include CMakeFiles/run_batch_softmax.dir/progress.make
 
 CMakeFiles/run_batch_softmax: bin/batch_softmax_demo
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running batch softmax demo"
-	echo ===\ Batch\ Softmax\ Demo\ ===
-	echo Processes\ multiple\ samples\ simultaneously
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-7/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running batch_softmax_demo"
 	bin/batch_softmax_demo
 
 CMakeFiles/run_batch_softmax.dir/codegen:

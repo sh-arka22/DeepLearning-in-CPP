@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -isystem /opt/homebrew/include/eigen3
 
-CXX_FLAGSarm64 = -O3 -DNDEBUG -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Werror
+CXX_FLAGSarm64 = -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Werror
 
-CXX_FLAGS = -O3 -DNDEBUG -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Werror
+CXX_FLAGS = -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic -Werror
 

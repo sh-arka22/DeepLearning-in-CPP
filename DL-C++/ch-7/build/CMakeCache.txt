@@ -20,8 +20,9 @@ CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//Build type
-CMAKE_BUILD_TYPE:STRING=Release
+//Choose the type of build, options are: None Debug Release RelWithDebInfo
+// MinSizeRel ...
+CMAKE_BUILD_TYPE:STRING=
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
@@ -213,15 +214,6 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 Eigen3_DIR:PATH=/opt/homebrew/share/eigen3/cmake
 
 //Value Computed by CMake
-ch7_optimization_BINARY_DIR:STATIC=/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-7/build
-
-//Value Computed by CMake
-ch7_optimization_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-ch7_optimization_SOURCE_DIR:STATIC=/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-7
-
-//Value Computed by CMake
 ch7_softmax_demos_BINARY_DIR:STATIC=/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-7/build
 
 //Value Computed by CMake
@@ -229,15 +221,6 @@ ch7_softmax_demos_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 ch7_softmax_demos_SOURCE_DIR:STATIC=/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-7
-
-//Value Computed by CMake
-softmax_demo_BINARY_DIR:STATIC=/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-7/build
-
-//Value Computed by CMake
-softmax_demo_IS_TOP_LEVEL:STATIC=ON
-
-//Value Computed by CMake
-softmax_demo_SOURCE_DIR:STATIC=/Users/arkajyotisaha/Desktop/DLusingC++/DL-C++/ch-7
 
 
 ########################

@@ -143,6 +143,19 @@ batch_softmax_demo/fast:
 .PHONY : batch_softmax_demo/fast
 
 #=============================================================================
+# Target rules for targets named iris_example
+
+# Build rule for target.
+iris_example: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 iris_example
+.PHONY : iris_example
+
+# fast build rule for target.
+iris_example/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/iris_example.dir/build.make CMakeFiles/iris_example.dir/build
+.PHONY : iris_example/fast
+
+#=============================================================================
 # Target rules for targets named build_all
 
 # Build rule for target.
@@ -182,6 +195,19 @@ run_batch_softmax/fast:
 .PHONY : run_batch_softmax/fast
 
 #=============================================================================
+# Target rules for targets named run_iris
+
+# Build rule for target.
+run_iris: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_iris
+.PHONY : run_iris
+
+# fast build rule for target.
+run_iris/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_iris.dir/build.make CMakeFiles/run_iris.dir/build
+.PHONY : run_iris/fast
+
+#=============================================================================
 # Target rules for targets named run_all
 
 # Build rule for target.
@@ -195,82 +221,43 @@ run_all/fast:
 .PHONY : run_all/fast
 
 #=============================================================================
-# Target rules for targets named run_all_impl
+# Target rules for targets named run_all_part1
 
 # Build rule for target.
-run_all_impl: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_all_impl
-.PHONY : run_all_impl
+run_all_part1: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_all_part1
+.PHONY : run_all_part1
 
 # fast build rule for target.
-run_all_impl/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_all_impl.dir/build.make CMakeFiles/run_all_impl.dir/build
-.PHONY : run_all_impl/fast
+run_all_part1/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_all_part1.dir/build.make CMakeFiles/run_all_part1.dir/build
+.PHONY : run_all_part1/fast
 
 #=============================================================================
-# Target rules for targets named run_verbose
+# Target rules for targets named run_all_part2
 
 # Build rule for target.
-run_verbose: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_verbose
-.PHONY : run_verbose
+run_all_part2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_all_part2
+.PHONY : run_all_part2
 
 # fast build rule for target.
-run_verbose/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_verbose.dir/build.make CMakeFiles/run_verbose.dir/build
-.PHONY : run_verbose/fast
+run_all_part2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_all_part2.dir/build.make CMakeFiles/run_all_part2.dir/build
+.PHONY : run_all_part2/fast
 
 #=============================================================================
-# Target rules for targets named run_verbose_softmax
+# Target rules for targets named run_all_part3
 
 # Build rule for target.
-run_verbose_softmax: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_verbose_softmax
-.PHONY : run_verbose_softmax
+run_all_part3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_all_part3
+.PHONY : run_all_part3
 
 # fast build rule for target.
-run_verbose_softmax/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_verbose_softmax.dir/build.make CMakeFiles/run_verbose_softmax.dir/build
-.PHONY : run_verbose_softmax/fast
-
-#=============================================================================
-# Target rules for targets named run_verbose_batch
-
-# Build rule for target.
-run_verbose_batch: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_verbose_batch
-.PHONY : run_verbose_batch
-
-# fast build rule for target.
-run_verbose_batch/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_verbose_batch.dir/build.make CMakeFiles/run_verbose_batch.dir/build
-.PHONY : run_verbose_batch/fast
-
-#=============================================================================
-# Target rules for targets named run
-
-# Build rule for target.
-run: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run
-.PHONY : run
-
-# fast build rule for target.
-run/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run.dir/build.make CMakeFiles/run.dir/build
-.PHONY : run/fast
-
-#=============================================================================
-# Target rules for targets named run_comparison
-
-# Build rule for target.
-run_comparison: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 run_comparison
-.PHONY : run_comparison
-
-# fast build rule for target.
-run_comparison/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_comparison.dir/build.make CMakeFiles/run_comparison.dir/build
-.PHONY : run_comparison/fast
+run_all_part3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_all_part3.dir/build.make CMakeFiles/run_all_part3.dir/build
+.PHONY : run_all_part3/fast
 
 src/batch_softmax.o: src/batch_softmax.cpp.o
 .PHONY : src/batch_softmax.o
@@ -295,6 +282,30 @@ src/batch_softmax.s: src/batch_softmax.cpp.s
 src/batch_softmax.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/batch_softmax_demo.dir/build.make CMakeFiles/batch_softmax_demo.dir/src/batch_softmax.cpp.s
 .PHONY : src/batch_softmax.cpp.s
+
+src/iris_example.o: src/iris_example.c++.o
+.PHONY : src/iris_example.o
+
+# target to build an object file
+src/iris_example.c++.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/iris_example.dir/build.make CMakeFiles/iris_example.dir/src/iris_example.c++.o
+.PHONY : src/iris_example.c++.o
+
+src/iris_example.i: src/iris_example.c++.i
+.PHONY : src/iris_example.i
+
+# target to preprocess a source file
+src/iris_example.c++.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/iris_example.dir/build.make CMakeFiles/iris_example.dir/src/iris_example.c++.i
+.PHONY : src/iris_example.c++.i
+
+src/iris_example.s: src/iris_example.c++.s
+.PHONY : src/iris_example.s
+
+# target to generate assembly for a file
+src/iris_example.c++.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/iris_example.dir/build.make CMakeFiles/iris_example.dir/src/iris_example.c++.s
+.PHONY : src/iris_example.c++.s
 
 src/softmax.o: src/softmax.cpp.o
 .PHONY : src/softmax.o
@@ -329,20 +340,22 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... build_all"
-	@echo "... run"
 	@echo "... run_all"
-	@echo "... run_all_impl"
+	@echo "... run_all_part1"
+	@echo "... run_all_part2"
+	@echo "... run_all_part3"
 	@echo "... run_batch_softmax"
-	@echo "... run_comparison"
+	@echo "... run_iris"
 	@echo "... run_softmax"
-	@echo "... run_verbose"
-	@echo "... run_verbose_batch"
-	@echo "... run_verbose_softmax"
 	@echo "... batch_softmax_demo"
+	@echo "... iris_example"
 	@echo "... softmax_demo"
 	@echo "... src/batch_softmax.o"
 	@echo "... src/batch_softmax.i"
 	@echo "... src/batch_softmax.s"
+	@echo "... src/iris_example.o"
+	@echo "... src/iris_example.i"
+	@echo "... src/iris_example.s"
 	@echo "... src/softmax.o"
 	@echo "... src/softmax.i"
 	@echo "... src/softmax.s"
