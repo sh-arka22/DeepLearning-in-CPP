@@ -17,8 +17,7 @@
 
 /*──────────────── Activation + Softmax ───────────────*/
 template <int R>
-struct Activation
-{
+struct Activation {
     virtual ~Activation() = default;
     virtual Eigen::Tensor<float, R>
     forward(const Eigen::Tensor<float, R> &) const = 0;
